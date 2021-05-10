@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Container from 'reat-bootstrap/Container';
 
 class App extends React.Component {
 
@@ -25,14 +27,21 @@ class App extends React.Component {
       contact: {
         title: 'Contact me',
       },
-
-      render() {
-
-        return (
-          <div> Portfolio </div>
-
-        );
-      }
     }
+  }
 
-    export default App;
+  render() {
+
+    return (
+      <router>
+        <container fluid>
+
+        </container>
+      </router>
+
+    );
+  }
+
+
+}
+export default App;
