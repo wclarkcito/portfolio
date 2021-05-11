@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Footer from './components/Footer';
 import HomePage from './pages/Homepage';
-import ProjectsPage from './pages/ProjectsPage';
+import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import Navigation from './components/Navbar';
 
@@ -21,17 +21,17 @@ class App extends React.Component {
       title: "Warrens Porfolio",
       headerLinks: [
         { title: 'Home', path: '/' },
-        { title: 'Projects', path: '/projects' },
+        { title: 'About', path: '/about' },
         { title: 'Contact', path: '/contact' }
       ],
       home: {
-        title: 'Forward not Backwards',
+        title: 'Move Forward',
         subTitle: 'Recent Projects',
         subHeading: 'Checkout my Projects '
 
       },
       projects: {
-        title: 'Projects',
+        title: 'About me',
       },
 
       contact: {
@@ -48,7 +48,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/contact' component={ContactPage} />
-          <Route path='/projects' component={ProjectsPage} />
+          <Route path='/about' component={AboutPage} />
         </Switch>
         <Footer />
       </Router>
