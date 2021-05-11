@@ -1,10 +1,14 @@
 import React from 'react';
-import contractor from '../assets/contractor';
-import lightbulb from '../assets/lightb';
-import Roster from '../assets/Roster';
-import Weather from '../assets/Weather';
-import employee from '../assets/employee';
-import ecommerce from '../assets/ecommerce';
+import Card from '../components/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+
+import contractor from '../assets/contractor.png';
+import lightbulb from '../assets/lightbulb.jpg';
+import Roster from '../assets/Roster.png';
+import Weather from '../assets/Weather.png';
+import employee from '../assets/employee.png';
+import ecommerce from '../assets/ecommerce.png';
 class Carousel extends React.Component {
 
     constructor(props) {
@@ -64,9 +68,36 @@ class Carousel extends React.Component {
         }
     }
 
+
+    handleCardClick = (id, card) => {
+        console.log(id);
+
+        let items = [...this.state.items];
+
+        items[id].selected = items[id].selected ? false : true;
+
+        items.forEach(item => {
+            if (item.id !== id) {
+                item.selected = false;
+            }
+        });
+        this.setState({
+            items
+        })
+    }
+
+    makeItems = (items) => {
+        return items.map(item => {
+            return <Card item={item} click={(e => this.handleCardClick(item.id, e))} key={item.id} />
+        })
+    }
     render() {
         return (
-            <p>Carousel Works</p>
+            <Container fluid={true}>
+                <Row className="justify-content-around">
+                    {this.makeItems(this.state.items)}
+                </Row>
+            </Container>
 
         )
     }
