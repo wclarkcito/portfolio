@@ -3,10 +3,8 @@ import './App.css';
 
 
 
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-// import Container from 'react-bootstrap/Container';
-// import Navbar from 'react-bootstrap/Navbar';
-// import Nav from 'react-bootstrap/Nav';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 
 import Footer from './components/Footer';
 import HomePage from './pages/Homepage';
