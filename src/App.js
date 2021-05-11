@@ -1,10 +1,19 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Container from 'react-bootstrap';
-import Navbar from 'react-bootstrap';
-import Nav from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+// import Container from 'react-bootstrap/Container';
+// import Navbar from 'react-bootstrap/Navbar';
+// import Nav from 'react-bootstrap/Nav';
+
+import Footer from './components/Footer';
+import HomePage from './pages/Homepage';
+import ProjectsPage from './pages/ProjectsPage';
+import ContactPage from './pages/ContactPage';
+import Navigation from './components/Navbar';
+
 
 class App extends React.Component {
 
@@ -14,7 +23,7 @@ class App extends React.Component {
       title: "Warrens Porfolio",
       headerLinks: [
         { title: 'Home', path: '/' },
-        { title: 'About', path: '/about' },
+        { title: 'Projects', path: '/projects' },
         { title: 'Contact', path: '/contact' }
       ],
       home: {
@@ -23,8 +32,8 @@ class App extends React.Component {
         subHeading: 'Checkout my Projects '
 
       },
-      about: {
-        title: 'About me',
+      projects: {
+        title: 'Projects',
       },
 
       contact: {
@@ -36,22 +45,15 @@ class App extends React.Component {
   render() {
 
     return (
-      <router>
-        <Container fluid={true}>
-          <Navbar className="border-bottom" bg="transparent" expand="lg">
-            <Navbar.Brand>Warren Clark</Navbar.Brand>
-
-            <Navbar.Toggle aria-controls="navbar-toggle" />
-            <Navbar.Collapse id="navbar-toggle">
-              <Nav className="ml-auto">
-                <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="/about">About</Link>
-                <Link className="nav-link" to="/contact">Contact</Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
-        </Container>
-      </router>
+      <Router>
+        <Navigation />
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='/contact' component={ContactPage} />
+          <Route path='/projects' component={ProjectsPage} />
+        </Switch>
+        <Footer />
+      </Router>
 
     );
   }
