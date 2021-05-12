@@ -6,7 +6,7 @@ import CardInfo from './CardInfo';
 function Card(props) {
 
     return (
-        <div className="col s-12 w-card" onClick={(e) => props.click(props.item)}>
+        <div className="col m-6 w-card" onClick={(e) => props.click(props.item)}>
             <img className="w-card-image" src={props.item.imgSrc} alt={props.item.imgSrc} />
             {props.item.selected && <CardInfo title={props.item.title} subtitle={props.item.subTitle} link={props.item.link} />
             }

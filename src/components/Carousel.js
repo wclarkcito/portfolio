@@ -5,10 +5,10 @@ import Row from 'react-bootstrap/Row';
 
 import contractor from '../assets/contractor.png';
 import lightbulb from '../assets/lightbulb.jpg';
-import Roster from '../assets/Roster.png';
+// import Roster from '../assets/Roster.png';
 import Weather from '../assets/Weather.png';
 // import employee from '../assets/employee.png';
-import ecommerce from '../assets/ecommerce.png';
+// import ecommerce from '../assets/ecommerce.png';
 class Carousel extends React.Component {
 
     constructor(props) {
@@ -47,22 +47,22 @@ class Carousel extends React.Component {
                 //     link: 'https://github.com/wclarkcito/employee-tracker',
                 //     selected: false
                 // },
-                {
-                    id: 4,
-                    title: 'Team-Profile-Generator',
-                    subTitle: 'Create a roster for your employees',
-                    imgSrc: Roster,
-                    link: 'https://github.com/wclarkcito/Team-Profile-Generator',
-                    selected: false
-                },
-                {
-                    id: 5,
-                    title: 'E-Commerce',
-                    subTitle: 'Manage your inventory',
-                    imgSrc: ecommerce,
-                    link: 'https://github.com/wclarkcito/e-commerce',
-                    selected: false
-                },
+                // {
+                //     id: 4,
+                //     title: 'Team-Profile-Generator',
+                //     subTitle: 'Create a roster for your employees',
+                //     imgSrc: Roster,
+                //     link: 'https://github.com/wclarkcito/Team-Profile-Generator',
+                //     selected: false
+                // },
+                // {
+                //     id: 5,
+                //     title: 'E-Commerce',
+                //     subTitle: 'Manage your inventory',
+                //     imgSrc: ecommerce,
+                //     link: 'https://github.com/wclarkcito/e-commerce',
+                //     selected: false
+                // },
             ]
 
         }
