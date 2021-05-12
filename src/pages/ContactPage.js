@@ -1,10 +1,11 @@
 import React from 'react';
-
+import API from '../utils/api';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 import Hero from '../components/Hero';
 import Content from '../components/Content';
+// import Axios from 'axios';
 
 
 class ContactPage extends React.Component {
@@ -22,7 +23,7 @@ class ContactPage extends React.Component {
     }
 
     handleChange = (event) => {
-        console.log(event);
+
 
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -41,6 +42,41 @@ class ContactPage extends React.Component {
             emailSent: false
 
         });
+        API.sendEmail({
+            email: this.state.email,
+            message: this.state.message,
+        }).then(res => {
+            if (res.status === 200) {
+                this.setState({
+                    emailSent: true
+                })
+
+            } else {
+                this.setState({
+                    emailSent: false
+                })
+            }
+        })
+        // Axios.post('http://localhost:3000/api/email', this.state)
+        //     .then(res => {
+        //         if (res.data.success) {
+        //             this.setState({
+        //                 disabled: false,
+        //                 emailSent: true
+        //             });
+        //         } else {
+        //             this.setState({
+        //                 disabled: false,
+        //                 emailSent: false
+        //             });
+        //         }
+        //     })
+        //     .catch(err => {
+        //         this.setState({
+        //             disabled: false,
+        //             emailSent: false
+        //         })
+        //     })
     }
 
 

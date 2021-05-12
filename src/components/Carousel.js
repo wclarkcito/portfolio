@@ -7,7 +7,7 @@ import contractor from '../assets/contractor.png';
 import lightbulb from '../assets/lightbulb.jpg';
 import Roster from '../assets/Roster.png';
 import Weather from '../assets/Weather.png';
-import employee from '../assets/employee.png';
+// import employee from '../assets/employee.png';
 import ecommerce from '../assets/ecommerce.png';
 class Carousel extends React.Component {
 
@@ -39,14 +39,14 @@ class Carousel extends React.Component {
                     link: 'file:///Users/warrenclark/Weather-Dashboard/index.html',
                     selected: false
                 },
-                {
-                    id: 3,
-                    title: 'Employee-Tracker',
-                    subTitle: 'Keep track of your employees!',
-                    imgSrc: employee,
-                    link: 'https://github.com/wclarkcito/employee-tracker',
-                    selected: false
-                },
+                // {
+                //     id: 3,
+                //     title: 'Employee-Tracker',
+                //     subTitle: 'Keep track of your employees!',
+                //     imgSrc: employee,
+                //     link: 'https://github.com/wclarkcito/employee-tracker',
+                //     selected: false
+                // },
                 {
                     id: 4,
                     title: 'Team-Profile-Generator',
@@ -94,8 +94,12 @@ class Carousel extends React.Component {
     render() {
         return (
             <Container fluid={true}>
-                <Row className="justify-content-around">
-                    {this.makeItems(this.state.items)}
+                <Row className="d-flex flex-row ">
+                    {this.state.items.map(item => {
+                        return <Card item={item} click={(e => this.handleCardClick(item.id, e))} key={item.id} />
+                    })
+                    }
+                    {/* {this.makeItems(this.state.items)} */}
                 </Row>
             </Container>
 
