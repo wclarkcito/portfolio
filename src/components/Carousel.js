@@ -99,7 +99,7 @@ class Carousel extends React.Component {
                         return <Card item={item} click={(e => this.handleCardClick(item.id, e))} key={item.id} />
                     })
                     }
-                    {/* {this.makeItems(this.state.items)} */}
+
                 </Row>
             </Container>
 
