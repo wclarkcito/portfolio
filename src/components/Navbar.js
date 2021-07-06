@@ -8,6 +8,9 @@ import { Link } from 'react-router-dom';
 
 
 
+
+
+
 function Navigation() {
     return (
 
@@ -21,6 +24,14 @@ function Navigation() {
                         <Link className="nav-link" to="/">Home</Link>
                         <Link className="nav-link" to="/about">About Me</Link>
                         <Link className="nav-link" to="/contact">Contact</Link>
+                        <a className="nav-link" href="https://docs.google.com/document/d/18sJsdlw3uFsIeyag0yYk6i4VUIQ6UnGwC-vF0V-P3go/edit?usp=sharing">Resume</a>
+                        <a className="nav-link" href="http://www.linkedin.com/in/warren-clark7997b98">LinkedIn<i
+                            className="fa fa-linkedin-square"></i></a>
+                        <a className="nav-link" href="https://github.com/wclarkcito">GitHub<i className="fa fa-github"></i></a>
+
+
+
+
 
                     </Nav>
                 </Navbar.Collapse>

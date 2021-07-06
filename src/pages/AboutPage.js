@@ -8,17 +8,18 @@ function AboutPage(props) {
             <Hero title={props.title} />
 
             <Content>
-                <p> Full Stack Web Developer with a passion for problem solving. I am proficient with JavaScript, Express, Node.js, MySQL and MongoDb.</p>
+                <p> Full Stack Web Developer with a passion for problem solving. </p>
 
-                <p>Learned Russian at the age of five and translated in Yalta at the age of 13.</p>
+                <p> Learned Russian at the age of five and worked as a translator for the Santa Barbara Yalta Sister cities organization in 1991.
+                </p>
 
-                <p>Graduated with a Bachelor's degree in English from the University of Puget Sound and hold a certificate in Full Stack Web Development from University of California, Davis</p>
+                <p> Graduated with a Bachelor's degree in English from the University of Puget Sound and hold a certificate in Full Stack Web Development from University of California, Davis.</p>
 
-                <p>Participated in an Archaeological dig of Tel Jaluul in Amand Jordan and have traveled extensively throughout the world.</p>
+                <p> Participated in Archaeological digs of Tel Jaluul in Amand Jordan and have traveled extensively throughout the world.</p>
 
-                <p>Worked as an Analyst for a Broker/Dealer in Irvine, CA and obtained NASD licenses Series 6, 63 and 3.</p>
+                <p> Worked as an Analyst for Winchester Hedge Fund of Funds in Irvine, CA and obtained NASD licenses Series 6, 63 and 3.</p>
 
-                <p>Have spent 15 years in the Service Industry both Managing and revitalizing numerous Bars and Restaurants increasing revenue.</p>
+                <p> Have spent 15 years in the Service industry both managing and revitalizing numerous Bars and Restaurants, thus increasing revenue.</p>
 
 
                 {/* From a very young age I was exposed to a great deal of travel. Having grown up in
