@@ -101,7 +101,7 @@ class ContactPage extends React.Component {
                     </br>
 
 
-                    <a href="mailto:Wclarkcito@gmail.com">Click here to send me an email directly!</a>
+                    <a href="mailto:Wclarkcito@gmail.com">Or you can reach me via email at wclarkcito@gmail.com</a>
 
 
                 </Content>
