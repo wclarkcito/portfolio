@@ -15,13 +15,13 @@ function AboutPage(props) {
 
                 <p> Staunch adherence to the Scrum framework.</p>
 
-                <p> Excellent communication skills. </p>
+                <p> Excellent written and verbal skills. </p>
 
                 <p> Graduated with a Bachelor's degree in English from the University of Puget Sound.</p>
 
                 <p> Former Analyst for Winchester Hedge Fund of Funds in Irvine, CA and obtained NASD licenses Series 6, 63 and 3.</p>
 
-                <p> Have spent 15 years in the Service industry both managing and revitalizing numerous Bars and Restaurants increasing revenue in all respective establishments.</p>
+                <p> Managed and revitalized numerous bars and restaurants increasing revenue in all respective establishments.</p>
 
 
 
